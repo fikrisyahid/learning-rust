@@ -1,0 +1,8 @@
+[package]
+name = "learning-rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+printers = "2.1.3"
+rand = "0.8.5"
