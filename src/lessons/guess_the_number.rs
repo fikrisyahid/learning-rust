@@ -5,7 +5,7 @@ use rand::Rng;
 pub fn run() {
     println!("Guess the number!");
 
-    let secret_number = rand::thread_rng().gen_range(0..=100);
+    let secret_number: i32 = rand::thread_rng().gen_range(-100..=100);
     println!("The secret number address is: {:p}", &secret_number);
 
     loop {
@@ -17,7 +17,7 @@ pub fn run() {
             .read_line(&mut guess)
             .expect("failed to read the line");
 
-        let guess: u32 = match guess.trim().parse() {
+        let guess: i32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Please input a number");
